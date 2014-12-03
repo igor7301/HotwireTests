@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="abstractPurchase" class="com.purchase.AbstractPurchase" abstract="true"></bean>
+       <bean id="abstractPurchaseWebApp" class="com.purchase.AbstractPurchaseWebApp" parent="abstractPurchase" abstract="true"></bean>
+
+
+
+       <bean id="delegatePurchase" class="com.purchase.DelegatePurchaseWebApp" parent="abstractPurchaseWebApp">
+              <property name="hotelPurchaseWebApp" ref="hotelPurchaseWebApp"></property>
+              <property name="carPurchaseWebApp" ref="carPurchaseWebApp"></property>
+       </bean>
+
+       <bean id="hotelPurchaseWebApp" class="com.purchase.hotel.HotelPurchaseWebApp"> </bean>
+       <bean id="carPurchaseWebApp" class="com.purchase.car.CarPurchaseWebApp"> </bean>
+
+
+</beans>

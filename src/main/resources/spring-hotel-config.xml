@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean id="hotelInfo" class="com.info.all.hotel.HotelInfo">
+              <property name="startDate" value="12/10/2014"></property>
+              <property name="endDate" value="12/12/2014"></property>
+              <property name="location" value="SFO"></property>
+       </bean>
+</beans>

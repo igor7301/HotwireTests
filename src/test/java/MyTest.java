@@ -8,6 +8,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import ru.yandex.qatools.allure.annotations.Step;
+import org.junit.Test;
 
 
 
@@ -16,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-config.xml")
-public class Test {
+public class MyTest {
 
     @Autowired
     private HotelPurchaseWebApp hotelPurchaseWebApp;
@@ -27,8 +29,9 @@ public class Test {
     @Autowired
     private DelegatePurchaseWebApp modelWebApp;
 
-    @org.junit.Test
+    @Test
     public void FirstTest() {
+
 
         applicationWebApp.loadApplication();
         modelWebApp.setVertical("hotel");
@@ -49,4 +52,6 @@ public class Test {
 
 
     }
+
+
 }

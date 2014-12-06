@@ -51,9 +51,6 @@
         </plugins>
     </build>
 
-
-
-
     <dependencies>
         <dependency>
             <groupId>DomesticPageObject</groupId>

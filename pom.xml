@@ -13,7 +13,7 @@
     <properties>
         <aspectj.version>1.7.4</aspectj.version>
         <allure.version>1.3.9</allure.version>
-        <baseFolder>$WORKSPACE}</baseFolder>
+        <baseFolder>${WORKSPACE}</baseFolder>
     </properties>
 
 
